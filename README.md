@@ -1,5 +1,5 @@
 # Final-Project-GDES5342
-<p2> Should be designed around a "mobile-first" philosophy [10 points] </p2>
+<ul> Should be designed around a "mobile-first" philosophy [10 points] </ul>
 <p2> Should be responsive and cover at least two viewports, and preferably three [10 points] </p2>
 <p2> HTML and CSS should be clean, well-organized and well-written [5 points] </p2>
 <p2> Should include at least three SVG files [5 points] </p2>
