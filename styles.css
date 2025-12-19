@@ -1,0 +1,106 @@
+:root {
+    /* color variables for theme */
+    --color-background: #0A1F44; /* dark blue background */
+    --color-text: #FFFFFF;       /* white text */
+    --color-outline: #333333;    /* charcoal outline */
+    --color-nav: #333333;        /* navbar background */
+    --color-accent: #4A90E2;     /* accent blue */
+
+    /* main font */
+    --font-main: "Smooch Sans", sans-serif;
+}
+
+body {
+    /* overall page style */
+    background-color: var(--color-background);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+    line-height: 1.7;
+    font-size: 18px;
+}
+
+/* top navigation bar */
+.navbar {
+    background-color: var(--color-nav) !important;
+    color: var(--color-text) !important;
+    padding: 1.25rem;
+    display: flex;              /* use flexbox */
+    gap: 1.5rem;                /* space between links */
+    justify-content: center;    /* center horizontally */
+    align-items: center;        /* center vertically */
+    position: sticky;           /* stick to top */
+    top: 0;
+    z-index: 100;               /* stay above other elements */
+}
+
+/* navbar links */
+.navbar a,
+.navbar .router-link-active,
+.navbar .router-link-exact-active {
+    color: var(--color-text) !important;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+/* hover effect for navbar links */
+.navbar a:hover {
+    color: var(--color-accent) !important;
+    text-decoration: underline;
+}
+
+/* default image style */
+img, .section-img, .club-img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;          /* crop nicely */
+    image-rendering: auto;
+    border: 3px solid var(--color-outline);
+    border-radius: 8px;         /* rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4); /* shadow */
+}
+
+/* profile image special case: circular */
+.profile-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    image-rendering: auto;
+    border-radius: 50%;         /* circle */
+    border: 3px solid var(--color-outline);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+/* headings style */
+h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+h2 {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-top: 1.5rem;
+}
+h3 {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+p, li {
+    font-weight: 400;
+    font-size: 1.125rem;
+}
+
+/* responsive scaling for larger screens */
+@media (min-width: 768px) {
+    body {
+        font-size: 20px; /* bigger text */
+    }
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2.25rem; }
+    h3 { font-size: 1.75rem; }
+    .navbar a { font-size: 1.25rem; }
+}
